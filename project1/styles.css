@@ -30,9 +30,16 @@ html {
 .main-header .wrapper {
     height: 120px;
     transition: .1s;
+
+    animation: reduce-height linear forwards;
+    animation-timeline: view(block);
+    animation-range: exit 0% exit 30%;
 }
-.main-header .wrapper.reduce-height {
-    height: 50px;
+
+@keyframes reduce-height {
+    to {
+        height: 50px;
+    }
 }
 
 .main-header .wrapper .logo {
